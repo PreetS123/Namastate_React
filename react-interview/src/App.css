@@ -1,0 +1,21 @@
+
+.slider-main{
+  margin:auto;
+  border: 1px solid #f1f1f1;
+}
+.slider-box{
+  display: flex;
+  gap: 20px;
+}
+button{
+  height:30px;
+  width:100px;
+  border-radius: 10px;
+  border: 1px solid #f1f1f1;
+}
+.slider_active{
+  display: block;
+}
+.slider_hidden{
+  display: none;
+}
