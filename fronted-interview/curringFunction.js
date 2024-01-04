@@ -10,3 +10,14 @@ let multiplyByTwo=multiply.bind(this,2);
 multiplyByTwo(8);
 let multiplyByThree=multiply.bind(this,3,5); //x=3 and y=5 
 multiplyByThree(6); // third arg is being ignored
+
+//Funtion curring using closures
+
+let Multiply= function (x){
+ return function (y){
+     console.log(x*y);
+  }
+}
+
+let MultByTwo= Multiply(2);
+MultByTwo(4)
