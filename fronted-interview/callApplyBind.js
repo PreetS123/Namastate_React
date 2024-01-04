@@ -7,7 +7,7 @@ let personalDetail={
     }
 }
 
-personalDetail.printFullName();
+// personalDetail.printFullName();
 
 let personalDetail1={
     fname:"Shivani",
@@ -28,7 +28,7 @@ let add={
     city:"Ranchi"
 }
 
-printFullAddress.call(add);
+printFullAddress.call(add,"Manoj","Kumar");
 printFullAddress.apply(add,["Preeti", "Sharma"])
 
 let add1={
@@ -36,4 +36,12 @@ let add1={
     city:"Gurugram"
 }
 
-printFullAddress.call(add1);
+printFullAddress.call(add1,"Ayush","Kumar");
+
+//bind Method-> It first makes the copy of the function and then binds it 
+
+let printMyData= printFullAddress.bind(add,"Puja","Kumari"); //Here printFullAddress has been as it is copied in printMyData funtion and then we can simply invoke the function
+
+printMyData();// this is just used to keep a copy of this method and it can be invoked later.
+
+
