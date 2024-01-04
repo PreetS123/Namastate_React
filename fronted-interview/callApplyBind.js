@@ -17,4 +17,22 @@ let personalDetail1={
 // we will now borrow the printFullName function from personalDetail object;
 personalDetail.printFullName.call(personalDetail1);
 
+// Alternative and good way of this function woul be making a printFullName function separetly and then borrwing it.
 
+let printFullAddress= function (){
+    console.log(this.state+" "+this.city);
+}
+
+let add={
+    state:"Jharkhand",
+    city:"Ranchi"
+}
+
+printFullAddress.call(add);
+
+let add1={
+    state:"Haryana",
+    city:"Gurugram"
+}
+
+printFullAddress.call(add1);
