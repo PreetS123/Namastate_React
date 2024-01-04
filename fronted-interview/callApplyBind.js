@@ -19,8 +19,8 @@ personalDetail.printFullName.call(personalDetail1);
 
 // Alternative and good way of this function woul be making a printFullName function separetly and then borrwing it.
 
-let printFullAddress= function (){
-    console.log(this.state+" "+this.city);
+let printFullAddress= function (fname,lname){
+    console.log(fname,lname, "from",this.state+" "+this.city);
 }
 
 let add={
@@ -29,6 +29,7 @@ let add={
 }
 
 printFullAddress.call(add);
+printFullAddress.apply(add,["Preeti", "Sharma"])
 
 let add1={
     state:"Haryana",
